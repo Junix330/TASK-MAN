@@ -19,7 +19,7 @@ namespace TASK_MAN
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new Form1());
+            Application.Run(new Main());
         }
     }
 }

@@ -11,13 +11,11 @@ using DevExpress.XtraEditors;
 
 namespace TASK_MAN
 {
-    public partial class Form2 : DevExpress.XtraEditors.XtraForm
+    public partial class frmLogin : DevExpress.XtraEditors.XtraForm
     {
-        public Form2()
+        public frmLogin()
         {
             InitializeComponent();
-            var k = new KeyHandler(this);
         }
-
     }
 }

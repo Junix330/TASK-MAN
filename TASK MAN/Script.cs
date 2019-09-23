@@ -18,7 +18,7 @@ namespace TASK_MAN
         {
             this.con = Connection;
 
-            var s = string.Format("Data Source={0}; User ID='{1}'; Password='{2}'; Initial Catalog='{3}';", con.Server, con.Username, con.Password, con.Database);
+            var s = string.Format("Server={0};port=3306;database='{3}';UID='{1}';password='{2}';", con.Server, con.Username, con.Password, con.Database);
             sqlCon = new MySqlConnection(s);
 
         }

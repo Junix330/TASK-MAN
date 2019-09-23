@@ -8,32 +8,58 @@ using System.Windows.Forms;
 
 namespace TASK_MAN
 {
-    public class KeyHandler
+    public class TaskController
     {
+
+        Object Model;
+
         private Form Form { get; set; }
 
-        public KeyHandler(Form form)
+        public TaskController(Form form, Object model)
         {
             this.Form = form;
+            this.Model = model;
             Form.KeyPreview = true;
             Form.Shown += Form_Shown;
-
-
         }
 
         private void Init()
         {
             Form.KeyDown += Form_KeyDown;
 
-            var b = Form.Controls["btnClose"];
-            if(b !=null)
-                b.Click += B_Click;
+            Control c;
+
+            c = Form.Controls["btnClose"];
+            if (c != null) c.Click += B_Click;
+
+            c = Form.Controls["btnSave"];
+            if (c != null) c.Click += C_Click; ;
+
 
         }
 
         private void Close()
         {
             Form.Close();
+        }
+
+        private void Commit()
+        {
+            if(Model is TaskModel)
+            {
+                var m = Model as TaskModel;
+                if (m == null) return;
+
+                m.Commit();
+                Close();
+            }
+
+
+        }
+
+        private void C_Click(object sender, EventArgs e)
+        {
+            Commit();
         }
 
         private void B_Click(object sender, EventArgs e)
@@ -52,6 +78,11 @@ namespace TASK_MAN
             {
                 case Keys.Escape:
                     Close();
+                    break;
+
+                case Keys.S: //ctrl + s
+                    if (e.Control) Commit();
+
                     break;
 
             }

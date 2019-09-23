@@ -47,6 +47,14 @@ namespace TASK_MAN
             return "";
         }
 
+        public static string AddQT(string s)
+        {
+            if (s == "")
+                return "''";
+            else
+                return "'" + s + "'";
+        }
+
         public static string Clean(object obj)
         {
             if (obj == null) return "";
