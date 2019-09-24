@@ -27,6 +27,7 @@ namespace TASK_MAN
             this.Password = "root";
         }
 
+
         public Conn(string server, string db, string user, string pass)
         {
             this.Server = server;
@@ -60,9 +61,8 @@ namespace TASK_MAN
                 }
 
             }
-            catch (Exception ex)
+            catch
             {
-                XtraMsg.Error(ex.Message);
                 return false;
             }
         }

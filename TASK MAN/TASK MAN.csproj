@@ -81,8 +81,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conn.cs" />
-    <Compile Include="Data.cs" />
+    <Compile Include="Components\Conn.cs" />
+    <Compile Include="Components\Data.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,7 +96,8 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\TaskController.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Components\Project.cs" />
+    <Compile Include="Sys\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmTask.cs">
       <SubType>Form</SubType>
@@ -104,9 +105,9 @@
     <Compile Include="frmTask.Designer.cs">
       <DependentUpon>frmTask.cs</DependentUpon>
     </Compile>
-    <Compile Include="Script.cs" />
+    <Compile Include="Components\Script.cs" />
     <Compile Include="Model\TaskModel.cs" />
-    <Compile Include="Utils.cs" />
+    <Compile Include="Components\Utils.cs" />
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,7 +127,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="App.config" />
+    <None Include="Sys\App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

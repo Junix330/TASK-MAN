@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.gcTask = new DevExpress.XtraGrid.GridControl();
@@ -39,6 +40,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.btnAdd = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -46,6 +48,10 @@
             this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLogin = new DevExpress.XtraBars.BarButtonItem();
+            this.tmRefresh = new System.Windows.Forms.Timer(this.components);
+            this.nyMain = new System.Windows.Forms.NotifyIcon(this.components);
+            this.imMain = new System.Windows.Forms.ImageList(this.components);
             this.fluentDesignFormContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcTask)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTask)).BeginInit();
@@ -92,6 +98,7 @@
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn7,
+            this.gridColumn9,
             this.gridColumn8});
             this.gvTask.GridControl = this.gcTask;
             this.gvTask.Name = "gvTask";
@@ -173,6 +180,20 @@
             this.gridColumn7.VisibleIndex = 6;
             this.gridColumn7.Width = 94;
             // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "TIME STAMP";
+            this.gridColumn9.DisplayFormat.FormatString = "MM-dd-yyyy HH:mm";
+            this.gridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn9.FieldName = "Added_Task";
+            this.gridColumn9.MinWidth = 25;
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.AllowEdit = false;
+            this.gridColumn9.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 7;
+            this.gridColumn9.Width = 94;
+            // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "ID_Task";
@@ -193,7 +214,8 @@
             this.accordionControl1.Location = new System.Drawing.Point(0, 37);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.accordionControl1.Name = "accordionControl1";
-            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
+            this.accordionControl1.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.False;
+            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Fluent;
             this.accordionControl1.Size = new System.Drawing.Size(202, 577);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
@@ -220,7 +242,8 @@
             this.fluentDesignFormControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barButtonItem1});
+            this.barButtonItem1,
+            this.btnLogin});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
@@ -228,12 +251,48 @@
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(1205, 37);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.btnLogin, false, "", "", false, false);
             // 
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "barButtonItem1";
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.AllowDrawArrow = false;
+            this.btnLogin.AllowDrawArrowInMenu = false;
+            this.btnLogin.AllowRightClickInMenu = false;
+            this.btnLogin.Caption = "GUEST";
+            this.btnLogin.CloseSubMenuOnClick = false;
+            this.btnLogin.Id = 0;
+            this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
+            this.btnLogin.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.LargeImage")));
+            this.btnLogin.ItemAppearance.Normal.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.ItemAppearance.Normal.Options.UseForeColor = true;
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnLogin_ItemClick);
+            // 
+            // tmRefresh
+            // 
+            this.tmRefresh.Interval = 180000;
+            this.tmRefresh.Tick += new System.EventHandler(this.TmRefresh_Tick);
+            // 
+            // nyMain
+            // 
+            this.nyMain.Icon = ((System.Drawing.Icon)(resources.GetObject("nyMain.Icon")));
+            this.nyMain.Text = "XEL TASK MAN";
+            this.nyMain.Visible = true;
+            // 
+            // imMain
+            // 
+            this.imMain.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imMain.ImageStream")));
+            this.imMain.TransparentColor = System.Drawing.Color.Transparent;
+            this.imMain.Images.SetKeyName(0, "1.ico");
+            this.imMain.Images.SetKeyName(1, "2.ico");
+            this.imMain.Images.SetKeyName(2, "3.ico");
             // 
             // Main
             // 
@@ -252,6 +311,7 @@
             this.NavigationControl = this.accordionControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XEL TASK MAN";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Shown += new System.EventHandler(this.Main_Shown);
             this.fluentDesignFormContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcTask)).EndInit();
@@ -280,6 +340,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraBars.BarButtonItem btnLogin;
+        private System.Windows.Forms.Timer tmRefresh;
+        private System.Windows.Forms.NotifyIcon nyMain;
+        private System.Windows.Forms.ImageList imMain;
     }
 }
 

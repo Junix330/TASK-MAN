@@ -128,6 +128,9 @@
             this.cboIncharge.Properties.AppearanceReadOnly.Options.UseFont = true;
             this.cboIncharge.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboIncharge.Properties.Items.AddRange(new object[] {
+            "WCU",
+            "JUNIX"});
             this.cboIncharge.Properties.Tag = "";
             this.cboIncharge.Size = new System.Drawing.Size(180, 30);
             this.cboIncharge.TabIndex = 18;
@@ -305,7 +308,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Tag = "task_master";
-            this.Load += new System.EventHandler(this.FrmTask_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cboIncharge.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboLevel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboType.Properties)).EndInit();

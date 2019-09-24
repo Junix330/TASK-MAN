@@ -73,6 +73,7 @@ namespace TASK_MAN
             {
                 cIncharge = c as ComboBoxEdit;
                 fControls.Add(cIncharge);
+                cIncharge.Text = Project.CURRENT_USER;
             }
 
             c = form.Controls["cboLevel"];
@@ -110,6 +111,10 @@ namespace TASK_MAN
                         v += "," + Utils.AddQT(c.Text.ToString());
                 }
 
+                //prepared
+                f += ",Prepared_Task";
+                v += "," + Utils.AddQT(Project.CURRENT_USER);
+
                 q += string.Format(" ({0}) ", f);
                 q += string.Format(" VALUES ({0}) ", v);
 
@@ -121,7 +126,6 @@ namespace TASK_MAN
 
             }
 
-            XtraMsg.Show(cType.Text);
             return false;
         }
 
@@ -131,22 +135,6 @@ namespace TASK_MAN
 
             return false;
         }
-
-
-        public string Project { get; set; }
-
-        public string Level { get; set; }
-
-        public string Type { get; set; }
-
-        public string Description { get; set; }
-
-        public string Incharge { get; set; }
-
-
-
-
-
 
 
 

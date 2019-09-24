@@ -29,9 +29,6 @@ namespace TASK_MAN
             var k = new TaskController(this, t);
         }
 
-        private void FrmTask_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }
