@@ -72,13 +72,13 @@
             // 
             this.btnClose.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Appearance.Options.UseFont = true;
-            this.btnClose.Location = new System.Drawing.Point(735, 269);
+            this.btnClose.Location = new System.Drawing.Point(735, 253);
             this.btnClose.LookAndFeel.SkinMaskColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnClose.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnClose.LookAndFeel.SkinName = "The Bezier";
             this.btnClose.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(95, 33);
+            this.btnClose.Size = new System.Drawing.Size(95, 31);
             this.btnClose.TabIndex = 21;
             this.btnClose.Text = "CLOSE";
             // 
@@ -86,13 +86,13 @@
             // 
             this.btnSave.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(634, 269);
+            this.btnSave.Location = new System.Drawing.Point(634, 253);
             this.btnSave.LookAndFeel.SkinMaskColor = System.Drawing.Color.Lime;
             this.btnSave.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSave.LookAndFeel.SkinName = "The Bezier";
             this.btnSave.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(95, 33);
+            this.btnSave.Size = new System.Drawing.Size(95, 31);
             this.btnSave.TabIndex = 20;
             this.btnSave.Text = "SAVE";
             // 
@@ -100,7 +100,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(28, 234);
+            this.labelControl5.Location = new System.Drawing.Point(28, 220);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(105, 23);
             this.labelControl5.TabIndex = 19;
@@ -108,7 +108,7 @@
             // 
             // cboIncharge
             // 
-            this.cboIncharge.Location = new System.Drawing.Point(136, 231);
+            this.cboIncharge.Location = new System.Drawing.Point(136, 217);
             this.cboIncharge.Name = "cboIncharge";
             this.cboIncharge.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboIncharge.Properties.Appearance.Options.UseFont = true;
@@ -140,7 +140,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(28, 95);
+            this.labelControl4.Location = new System.Drawing.Point(28, 89);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(97, 23);
             this.labelControl4.TabIndex = 17;
@@ -148,7 +148,7 @@
             // 
             // cboLevel
             // 
-            this.cboLevel.Location = new System.Drawing.Point(136, 92);
+            this.cboLevel.Location = new System.Drawing.Point(136, 87);
             this.cboLevel.Name = "cboLevel";
             this.cboLevel.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLevel.Properties.Appearance.Options.UseFont = true;
@@ -181,7 +181,7 @@
             // 
             // cboType
             // 
-            this.cboType.Location = new System.Drawing.Point(136, 56);
+            this.cboType.Location = new System.Drawing.Point(136, 53);
             this.cboType.Name = "cboType";
             this.cboType.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboType.Properties.Appearance.Options.UseFont = true;
@@ -214,7 +214,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(28, 141);
+            this.labelControl1.Location = new System.Drawing.Point(28, 133);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(86, 23);
             this.labelControl1.TabIndex = 13;
@@ -222,18 +222,18 @@
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(136, 140);
+            this.txtDesc.Location = new System.Drawing.Point(136, 132);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesc.Properties.Appearance.Options.UseFont = true;
             this.txtDesc.Properties.Tag = "";
-            this.txtDesc.Size = new System.Drawing.Size(371, 67);
+            this.txtDesc.Size = new System.Drawing.Size(371, 63);
             this.txtDesc.TabIndex = 12;
             this.txtDesc.Tag = "Desc_Task";
             // 
             // cboPrj
             // 
-            this.cboPrj.Location = new System.Drawing.Point(136, 20);
+            this.cboPrj.Location = new System.Drawing.Point(136, 19);
             this.cboPrj.Name = "cboPrj";
             this.cboPrj.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPrj.Properties.Appearance.Options.UseFont = true;
@@ -262,7 +262,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(28, 59);
+            this.labelControl6.Location = new System.Drawing.Point(28, 56);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(74, 23);
             this.labelControl6.TabIndex = 22;
@@ -272,7 +272,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(28, 23);
+            this.labelControl7.Location = new System.Drawing.Point(28, 22);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(53, 23);
             this.labelControl7.TabIndex = 23;
@@ -282,9 +282,9 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 329);
+            this.ClientSize = new System.Drawing.Size(867, 308);
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.btnClose);

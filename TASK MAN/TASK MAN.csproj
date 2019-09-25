@@ -95,6 +95,7 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\LoginController.cs" />
     <Compile Include="Model\TaskController.cs" />
     <Compile Include="Components\Project.cs" />
     <Compile Include="Sys\Program.cs" />
@@ -127,6 +128,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="App.config" />
     <None Include="Sys\App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

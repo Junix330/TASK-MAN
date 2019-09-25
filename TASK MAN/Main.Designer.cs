@@ -52,11 +52,13 @@
             this.tmRefresh = new System.Windows.Forms.Timer(this.components);
             this.nyMain = new System.Windows.Forms.NotifyIcon(this.components);
             this.imMain = new System.Windows.Forms.ImageList(this.components);
+            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.fluentDesignFormContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcTask)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTask)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // fluentDesignFormContainer1
@@ -294,6 +296,13 @@
             this.imMain.Images.SetKeyName(1, "2.ico");
             this.imMain.Images.SetKeyName(2, "3.ico");
             // 
+            // imageCollection1
+            // 
+            this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
+            this.imageCollection1.Images.SetKeyName(0, "1.ico");
+            this.imageCollection1.Images.SetKeyName(1, "2.ico");
+            this.imageCollection1.Images.SetKeyName(2, "3.ico");
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -318,6 +327,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvTask)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -345,6 +355,7 @@
         private System.Windows.Forms.Timer tmRefresh;
         private System.Windows.Forms.NotifyIcon nyMain;
         private System.Windows.Forms.ImageList imMain;
+        private DevExpress.Utils.ImageCollection imageCollection1;
     }
 }
 

@@ -40,6 +40,7 @@
             // 
             // txtUser
             // 
+            this.txtUser.EditValue = "GUEST";
             this.txtUser.Location = new System.Drawing.Point(85, 114);
             this.txtUser.Name = "txtUser";
             this.txtUser.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,6 +85,8 @@
             this.txtPass.Size = new System.Drawing.Size(333, 39);
             this.txtPass.TabIndex = 24;
             this.txtPass.Tag = "Level_Task";
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPass_KeyDown);
+            this.txtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPass_KeyPress);
             // 
             // pictureEdit1
             // 
@@ -118,6 +121,7 @@
             this.btnLogin.Size = new System.Drawing.Size(333, 34);
             this.btnLogin.TabIndex = 29;
             this.btnLogin.Text = "LOGIN";
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // frmLogin
             // 

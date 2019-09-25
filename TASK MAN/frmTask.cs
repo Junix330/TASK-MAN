@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace TASK_MAN
 {
-    public partial class frmTask : DevExpress.XtraEditors.XtraForm
+    public partial class frmTask : XtraForm
     {
         public frmTask()
         {

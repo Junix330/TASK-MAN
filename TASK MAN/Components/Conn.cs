@@ -21,10 +21,13 @@ namespace TASK_MAN
 
         public Conn()
         {
+            //this.Server = "122.52.134.133";
             this.Server = "localhost";
             this.Database = "xel erp";
+            //this.Username = "sw";
             this.Username = "root";
             this.Password = "root";
+
         }
 
 
